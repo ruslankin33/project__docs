@@ -8,12 +8,12 @@ title: 'Создать базовый Symfony'
 
 Далее выполняем ряд команд:
 ```
-$ cp /var/www/html /var/www/tmp
+$ cp -r /var/www/html /var/www/tmp
 $ rm -rf /var/www/html/*
 $ rm -rf /var/www/html/.*
 $ cd /var/www
 $ composer create-project symfony/skeleton html
-$ cp /var/www/html /var/www/tmp
+$ cp -r /var/www/tmp/* /var/www/html
 ```
 ### Установка пакетов
 Находясь в контейнере вводим  
