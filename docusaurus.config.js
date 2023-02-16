@@ -6,12 +6,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Документация',
-  tagline: 'Успешный разработчик должен иметь под рукой свои конспекты',
+  title: 'Учимся вместе',
+  tagline: 'Совместное обучение - залог успеха',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://ruslankin.ru',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -40,9 +40,6 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
         },
-        blog: {
-          showReadingTime: true,
-        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -57,21 +54,34 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'RuslankinDocs',
-        // logo: {
-        //   alt: 'My Site Logo',
-        //   src: 'img/logo.svg',
-        // },
+        logo: {
+          alt: 'My Site Logo',
+          src: 'img/mouse_wink.svg',
+        },
         items: [
           {
-            to: '/blog',
-            label: 'Встречи',
-            position: 'left'
+            type: 'doc',
+            docId: 'frontend',
+            position: 'left',
+            label: 'Frontend',
           },
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'backend',
             position: 'left',
-            label: 'Библиотека знаний',
+            label: 'Backend',
+          },
+          {
+            type: 'doc',
+            docId: 'docker',
+            position: 'left',
+            label: 'Docker',
+          },
+          {
+            type: 'doc',
+            docId: 'git',
+            position: 'left',
+            label: 'Git',
           },
         ],
       },
@@ -79,30 +89,17 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
             title: 'Community',
             items: [
               {
-                label: 'Будущие сеньоры',
-                href: 'https://t.me',
+                label: 'Учимся вместе',
+                href: 'https://t.me/+FldPMuRMGVNmMDli',
               },
             ],
           },
           {
             title: 'More',
             items: [
-              {
-                label: 'Meetings',
-                to: '/blog',
-              },
               {
                 label: 'GitHub',
                 href: 'https://github.com/facebook/docusaurus',
