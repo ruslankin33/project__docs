@@ -63,7 +63,7 @@ const config = {
             type: 'doc',
             docId: 'project',
             position: 'left',
-            label: 'Project',
+            label: 'Pet-project',
           },
           {
             type: 'doc',
