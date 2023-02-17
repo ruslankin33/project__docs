@@ -61,6 +61,12 @@ const config = {
         items: [
           {
             type: 'doc',
+            docId: 'project',
+            position: 'left',
+            label: 'Project',
+          },
+          {
+            type: 'doc',
             docId: 'frontend',
             position: 'left',
             label: 'Frontend',

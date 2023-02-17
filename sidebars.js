@@ -13,6 +13,10 @@
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
+  projectSidebar: [
+    'project',
+    'Project/project-start'
+  ],
   backendSidebar: [
     'backend',
   ],
@@ -28,7 +32,7 @@ const sidebars = {
     'docker',
   ],
   gitSidebar: [
-    'git',
+    'git'
   ],
 };
 
