@@ -5,7 +5,6 @@ import styles from './styles.module.css';
 const FeatureList = [
     {
         title: 'Вопросы',
-        Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
         description: (
             <>
                 Присоединяйся к группе в телеграмм, добавляй свои вопросы и темы для обсуждения, в которых ты хотел бы разобраться
@@ -14,7 +13,6 @@ const FeatureList = [
     },
     {
         title: 'Обсуждения',
-        Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
         description: (
             <>
                 Участвуй в обсуждении активных тем, добавляй ссылки на статьи, видео и выражай свое мнение в чатах
@@ -23,7 +21,6 @@ const FeatureList = [
     },
     {
         title: 'Ответы',
-        Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
         description: (
             <>
                 Итоговый результат будет сохранен на этом сайте. Ты можешь вернуться к статье в любое время и освежить знания в памяти
@@ -32,7 +29,7 @@ const FeatureList = [
     },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({title, description}) {
     return (
         <div className={clsx('col col--4')} style={{paddingTop:100}}>
             <div className="text--center padding-horiz--md">

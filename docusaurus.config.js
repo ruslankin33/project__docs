@@ -55,15 +55,21 @@ const config = {
       navbar: {
         title: 'RuslankinDocs',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/mouse_wink.svg',
+          alt: 'logo',
+          src: 'img/logo.svg',
         },
         items: [
           {
             type: 'doc',
-            docId: 'project',
+            docId: 'backend',
             position: 'left',
-            label: 'Pet-project',
+            label: 'Backend',
+          },
+          {
+            type: 'doc',
+            docId: 'devops',
+            position: 'left',
+            label: 'DevOps',
           },
           {
             type: 'doc',
@@ -73,21 +79,15 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'backend',
-            position: 'left',
-            label: 'Backend',
-          },
-          {
-            type: 'doc',
-            docId: 'docker',
-            position: 'left',
-            label: 'Docker',
-          },
-          {
-            type: 'doc',
             docId: 'git',
             position: 'left',
             label: 'Git',
+          },
+          {
+            type: 'doc',
+            docId: 'pet-project',
+            position: 'left',
+            label: 'Pet-project',
           },
         ],
       },

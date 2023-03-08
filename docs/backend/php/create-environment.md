@@ -1,10 +1,13 @@
 ---
 title: 'Создать окружение'
+sidebar_position: 3
+pagination_next: null
+pagination_prev: null
 ---
 
 ## Подготовка окружения для проекта на РНР
 
-Чтобы создать окружение необходимо 3 файла: Dockerfile, docker-compose.yaml, default.conf.
+Чтобы создать окружение, необходимо 3 файла: Dockerfile, docker-compose.yaml, default.conf.
 
 Dockerfile
 ```dockerfile
