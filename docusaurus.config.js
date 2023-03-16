@@ -11,7 +11,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://ruslankin.ru',
+  url: 'https://docs.ruslankin.ru',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -61,33 +61,15 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'backend',
+            docId: 'draft',
             position: 'left',
-            label: 'Backend',
+            label: 'Черновики',
           },
           {
             type: 'doc',
-            docId: 'devops',
+            docId: 'notes',
             position: 'left',
-            label: 'DevOps',
-          },
-          {
-            type: 'doc',
-            docId: 'frontend',
-            position: 'left',
-            label: 'Frontend',
-          },
-          {
-            type: 'doc',
-            docId: 'git',
-            position: 'left',
-            label: 'Git',
-          },
-          {
-            type: 'doc',
-            docId: 'pet-project',
-            position: 'left',
-            label: 'Pet-project',
+            label: 'Конспекты',
           },
         ],
       },

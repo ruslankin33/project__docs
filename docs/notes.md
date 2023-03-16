@@ -1,9 +1,10 @@
 ---
 title: 'Фундаментальные навыки'
-sidebar_position: 3
+sidebar_position: 1
+slug: /skill-list
 ---
 
-# Что нужно знать
+### Что нужно знать:
 
 - алгоритмы и структуры данных
 - git
