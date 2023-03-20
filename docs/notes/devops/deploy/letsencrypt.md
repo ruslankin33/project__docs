@@ -123,8 +123,9 @@ NEXT STEPS:
 Autorenewal of --manual certificates requires the use of an authentication hook script (--manual-auth-hook)
 but one was not provided. To renew this certificate, repeat this same certbot command before the certificate's expiry date
 ```
+Это означает, что сертификаты выпущены и хранятся в папке `/etc/letsencrypt/live/ruslankin.ru`
 
-## Автобновление сертификата
+## Автообновление сертификата
 
 Сделал как в примере из источника, пока не пройдет 3 месяца, не поймешь, работает или нет.
 
@@ -139,5 +140,36 @@ sudo touch /etc/cron.weekly/cert-nginx \
 #!/bin/bash
 /usr/bin/certbot renew --post-hook "service nginx reload"
 ```
+Сохраняем.
 
-[Источник obu4alka.ru](https://obu4alka.ru/free-wildcard-lets-encrypt.html)
+## Добавление сертификата в nginx
+
+Теперь для каждого поддомена можно использовать один и тот же сертификат.  
+Для подключения в nginx необходимо в его файл конфигурации в папке conf.d,
+там, где конфигурации нужного поддомена, дописать прослушивание порта 443
+и четыре строки сертификата:
+```
+server {
+    listen 443 ssl;
+    server_name docs.ruslankin.ru www.docs.ruslankin.ru;
+    root /var/www/docs.ruslankin.ru;
+    
+    ssl_certificate /etc/letsencrypt/live/ruslankin.ru/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/ruslankin.ru/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+}
+```
+
+## Перенаправление с http на https
+
+Для этого пропишем в том же файле конфигурации еще один блок `server`:
+```
+server {
+    listen 80;
+    server_name ruslankin.ru www.ruslankin.ru;
+    return 301 https://$host$request_uri;
+}
+```
+
+Источник: [obu4alka.ru](https://obu4alka.ru/free-wildcard-lets-encrypt.html)
